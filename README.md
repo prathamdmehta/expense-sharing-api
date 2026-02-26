@@ -37,8 +37,22 @@ Tech Stack
 
 Project Structure (simplified)
 ------------------------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashExpense_Sharing/  ├── expense_sharing/        # Django project (settings, urls, wsgi)  │   ├── settings.py  │   ├── urls.py  │   └── ...  ├── core/                   # Main app with models, views, serializers  │   ├── models.py  │   ├── views.py  │   ├── serializers.py  │   └── ...  ├── manage.py  ├── Dockerfile  ├── docker-compose.yml  └── requirements.txt   `
+`
+Expense_Sharing/
+├── expense_sharing/        # Django project (settings, urls, wsgi)
+│   ├── settings.py
+│   ├── urls.py
+│   └── ...
+├── core/                   # Main app with models, views, serializers
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   └── ...
+├── manage.py
+├── Dockerfile
+├── docker-compose.yml
+└── requirements.txt
+`
 
 Getting Started (Docker)
 ------------------------
@@ -53,13 +67,15 @@ Prerequisites
 
 1\. Clone the repository
 ------------------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashgit clone https://github.com/your-username/expense-sharing.git  cd expense-sharing   `
+`
+git clone https://github.com/your-username/expense-sharing.git
+cd expense-sharing
+`
 
 2\. Build and run with Docker
 -----------------------------
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashdocker compose up --build   `
+`   bashdocker compose up --build   `
 
 This will:
 
@@ -75,11 +91,11 @@ Creating a Superuser
 
 To access the Django admin:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashdocker compose exec api python manage.py createsuperuser   `
+`   bashdocker compose exec api python manage.py createsuperuser   `
 
 Then open:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   texthttp://localhost:8000/admin/   `
+`   texthttp://localhost:8000/admin/   `
 
 Log in with the username and password you just created.
 
@@ -88,19 +104,19 @@ Useful Commands
 
 Restart containers:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashdocker compose restart   `
+L`   bashdocker compose restart   `
 
 Stop containers:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashdocker compose down   `
+`   bashdocker compose down   `
 
 View logs:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashdocker compose logs -f   `
+`   bashdocker compose logs -f   `
 
 Run migrations manually:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   bashdocker compose exec api python manage.py migrate   `
+`   bashdocker compose exec api python manage.py migrate   `
 
 API Endpoints (examples)
 ------------------------
