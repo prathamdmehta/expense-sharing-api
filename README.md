@@ -37,7 +37,7 @@ Tech Stack
 
 Project Structure (simplified)
 ------------------------------
-`
+```
 Expense_Sharing/
 ├── expense_sharing/        # Django project (settings, urls, wsgi)
 │   ├── settings.py
@@ -52,7 +52,7 @@ Expense_Sharing/
 ├── Dockerfile
 ├── docker-compose.yml
 └── requirements.txt
-`
+```
 
 Getting Started (Docker)
 ------------------------
@@ -67,15 +67,15 @@ Prerequisites
 
 1\. Clone the repository
 ------------------------
-`
+```
 git clone https://github.com/your-username/expense-sharing.git
 cd expense-sharing
-`
+```
 
 2\. Build and run with Docker
 -----------------------------
 
-`   bashdocker compose up --build   `
+```   bashdocker compose up --build   ```
 
 This will:
 
@@ -91,11 +91,11 @@ Creating a Superuser
 
 To access the Django admin:
 
-`   bashdocker compose exec api python manage.py createsuperuser   `
+```   bashdocker compose exec api python manage.py createsuperuser   ```
 
 Then open:
 
-`   texthttp://localhost:8000/admin/   `
+```   texthttp://localhost:8000/admin/   ```
 
 Log in with the username and password you just created.
 
@@ -104,19 +104,19 @@ Useful Commands
 
 Restart containers:
 
-`   bashdocker compose restart   `
+```   bashdocker compose restart   ```
 
 Stop containers:
 
-`   bashdocker compose down   `
+```  bashdocker compose down   ```
 
 View logs:
 
-`   bashdocker compose logs -f   `
+```   bashdocker compose logs -f   ```
 
 Run migrations manually:
 
-`   bashdocker compose exec api python manage.py migrate   `
+```   bashdocker compose exec api python manage.py migrate   ```
 
 API Endpoints (examples)
 ------------------------
