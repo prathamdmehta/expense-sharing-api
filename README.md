@@ -104,7 +104,7 @@ Useful Commands
 
 Restart containers:
 
-L`   bashdocker compose restart   `
+`   bashdocker compose restart   `
 
 Stop containers:
 
